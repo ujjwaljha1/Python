@@ -1,0 +1,128 @@
+Python Lists are just like the arrays, declared in other languages which is an ordered collection of data. It is very flexible as the items in a list do not need to be of the same type. Here are the key characteristics of lists:
+
+Lists in Python maintain the order of elements as they are inserted. The order in which elements are added is the same order in which they are stored.
+Lists are mutable, meaning you can modify their elements after the list is created. You can change, add, or remove elements from a list.
+Lists can contain elements of different data types.
+Lists in Python are dynamic, meaning they can grow or shrink in size as needed.
+Lists support indexing, allowing you to access individual elements using their position (index) in the list.
+Lists are iterable, meaning you can loop through each element using a for loop.
+Creating Lists
+In Python, you can create a list by enclosing a sequence of elements in square brackets ([]), separated by commas. List can be used to
+
+Python3
+
+# creating a student_info list to store the information about the student roll no,name, course and marks scored
+Student_info = [21, 'Rose', "CSE", 30, 40, 50]
+print(Student_info)
+[21, 'Rose', 'CSE', 30, 40, 50]
+Accessing elements
+List elements can be accessed using their index, starting from 0 for the first element. Negative indices can also be used to access elements from the end of the list.
+
+Python3
+
+Student_info = [21, 'Rose', "CSE", 30, 40, 50, 120]
+print("Student_roll :", Student_info[0], end=' , ')
+print("Student_name :", Student_info[1], end=', ')
+print("Student_totalMarks :", Student_info[-1], end=' ')
+Student_roll : 21 , Student_name : Rose, Student_totalMarks : 120
+Slicing Lists
+List slicing allows you to create sub-lists by specifying a range of indices.
+
+
+
+
+slicing
+
+
+Modifying Lists
+Changing elements
+Python3
+
+Student_info = [21, "Rose", "CSE", 20, 30, 50, 120]
+Student_info[2] = "ME"
+print(Student_info)
+[21, 'Rose', 'ME', 20, 30, 50, 120]
+Adding elements
+Python3
+
+Student_info = [21, "Rose", "CSE", 20, 30, 50, 120]
+Student_info.append(50)
+print(Student_info)
+[21, 'Rose', 'CSE', 20, 30, 50, 120, 50]
+Removing elements
+Python3
+
+Student_info = [21, "Rose", "CSE", 20, 30, 50, 120]
+Student_info.remove(50)
+print(Student_info)
+[21, 'Rose', 'CSE', 20, 30, 120]
+List Operations:
+a. Concatenation:
+Lists can be concatenated using the + operator.
+
+Python3
+
+Student_info = [21, "Rose", "CSE", 20, 30, 50, 120]
+Student2_info = [22, "John", "ME", 40, 40, 50, 130]
+print(Student_info + Student2_info)
+[21, 'Rose', 'CSE', 20, 30, 50, 120, 22, 'John', 'ME', 40, 40, 50, 130]
+b. Repetition:
+Lists can be repeated using the * operator.
+
+Python3
+
+Student_info = [21, "Rose", "CSE", 20, 30, 50, 120]
+print(Student_info * 2)
+[21, 'Rose', 'CSE', 20, 30, 50, 120, 21, 'Rose', 'CSE', 20, 30, 50, 120]
+Common List Methods:
+a. len():
+Returns the length (number of elements) of a list.
+
+b. sort():
+Sorts the elements of a list in ascending order. If you want to sort a list in descending order, you can use the reverse parameter of the sort() method. Setting reverse=True will sort the list in descending order.
+
+c. reverse():
+Reverses the elements of a list.
+
+Python3
+
+List = [2.0, 24.1, 3.6, 12.0, 4.5]
+print(len(List))
+List.sort()
+print(List)
+List.reverse()
+print(List)
+Output - 5
+
+[2.0, 3.6, 4.5, 12.0, 24.1]
+
+[24.1, 12.0, 4.5, 3.6, 2.0]
+
+Challenge Galore
+Problem Statement - Count Occurrences of each unique word in a Sentence
+Python3
+
+def count_word_occurrences(sentence):
+    word_list = sentence.split()
+    unique_words = []
+    word_counts = []
+
+    for word in word_list:
+        # Check if the word is already in the unique_words list
+        if word in unique_words:
+            index = unique_words.index(word)
+            word_counts[index] += 1
+        else:
+            # Add the word to the unique_words list and initialize its count to 1
+            unique_words.append(word)
+            word_counts.append(1)
+
+    return unique_words, word_counts
+
+# User input
+user_sentence = input("Enter a sentence: ")
+
+unique_words, word_counts = count_word_occurrences(user_sentence)
+print("Word occurrences in the sentence:")
+for word, count in zip(unique_words, word_counts):
+    print(f"{word}: {count}")
