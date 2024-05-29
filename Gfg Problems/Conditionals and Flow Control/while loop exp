@@ -1,0 +1,15 @@
+Explanation:
+Input Reading: x = int(input()) reads the input integer x.
+While Loop: while x >= 0 runs the loop as long as x is non-negative.
+Print Statement: print(x, end=" ") prints the current value of x followed by a space, ensuring the numbers are on the same line.
+Decrement x: x -= 1 decreases the value of x by 1 in each iteration.
+Driver Code:
+Multiple Test Cases: The main() function handles multiple test cases by reading the number of test cases and calling the utility() function for each test case.
+Output Separation: print() after the call to utility() ensures that each test case's output is separated by a newline.
+This approach ensures that the numbers from x to 0 are printed in decreasing order for each test case, with the outputs of different test cases separated by new lines.
+
+
+
+
+
+
