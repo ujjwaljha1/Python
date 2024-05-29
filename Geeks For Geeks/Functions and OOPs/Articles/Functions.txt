@@ -1,0 +1,142 @@
+A function is a block of organized, reusable code that performs a specific task. In python we use the 'def' keyword to define a function followed by a function name. We can pass zero or more parameters within a function.
+
+fun
+Properties of a function
+1. Modularity
+Functions allow you to break down a program into smaller, manageable pieces. Each function can perform a specific task, making the code more modular and easier to understand.
+
+2. Reusability
+Functions allows a block of code to write at one place, so that instead of writing the same code again and again for different inputs, we can do the function calls to reuse code contained in it over and over again.
+
+3. Encapsulation
+Functions encapsulate a specific piece of functionality. This means that the internal details of a function are hidden from the rest of the program, but we can call the function anywhere and use its functionalities without how it does that.
+
+4. Recursion
+Functions in Python can be recursive, meaning a function can call itself. This is a powerful technique for solving problems that can be broken down into smaller, similar sub-problems.
+
+Types of functions
+There are basically two types of functions in python:
+
+1. Built-in function are functions that are already defined in Python and are available for use without the need for additional declarations.
+2. User defined function are functions created by the programmer to perform specific tasks. These functions are defined using the def keyword and can include parameters, a docstring, and a code block.
+
+Creating and calling a function
+You can create a keyword using 'def' keyword and can add any type of functionalities and properties to it as we require.
+
+After creating a function in Python we can call it by using the name of the function followed by parenthesis containing parameters of that particular function.
+
+Python3
+
+#creating a function to calculate area of circle
+def calculate_area(radius):
+    area = 3.14 * radius**2
+    return area
+
+#calling the user-defined function
+circle_area = calculate_area(5)
+print(circle_area)
+Output - 78.5
+
+Function Arguments
+1. Default Arguments
+Functions can have default parameter values. If a value for a parameter is not provided during the function call, the default value is used.
+
+Python3
+
+def greet(name, greeting="Hello"):
+    message = f"{greeting}, {name}!"
+    return message
+print(greet("Geeks"))
+Output - Hello, Geeks!
+
+2. Keyword Arguments
+Passing keyword arguments allow the caller to specify the argument name with values so that the caller does not need to remember the order of parameters.
+
+Python3
+
+def student(firstname, lastname):
+	print(firstname, lastname)
+
+# Keyword arguments
+student(firstname='Python', lastname='Programmer')
+student(lastname='Programmer', firstname='Python')
+Output - Python Programmer
+
+Python Programmer
+
+3. Variable-length Arguments
+Python supports variable-length arguments through *args and **kwargs. This allows a function to accept a flexible number of arguments.
+
+Python3
+
+def print_values(*args, **kwargs):
+    print("Positional arguments:", args)
+    print("Keyword arguments:", kwargs)
+
+print_values(1, 2, 3, name="Rose", age=24)
+Output - Positional arguments: (1, 2, 3)
+
+Keyword arguments: {'name': 'Rose', 'age': 24}
+
+Nested function
+In Python, a nested function is a function defined inside another function. The inner function has access to the variables of the outer (enclosing) function, and it can use them even after the outer function has finished execution. This concept is known as "closure".
+
+fun_nested
+Python3
+
+def func_1(x):
+    S = "Data Science with Python"
+    def func_2():
+        return (S,x)
+    return func_2()
+
+# Create a closure
+closure = func_1(3.0)
+
+print(closure)
+Output - ('Data Science with Python', 3.0)
+
+Recursive function
+A recursive function is a function that calls itself either directly or indirectly in order to solve a problem. Recursive functions are useful for solving problems that can be broken down into smaller, similar sub-problems.
+
+
+
+recc
+
+
+Python3
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+result = factorial(5)
+print(result) 
+Output - 120
+
+Challenge Galore
+Problem Statement - Calculating the nth term of the Ackermann function.
+The Ackermann function is a recursive mathematical function that is exceptionally fast-growing. It is often used to demonstrate the difference in growth rates between simple recursive algorithms and more efficient ones.
+
+If m = 0, the result is n + 1.
+
+If m > 0 and n = 0, the result is ackermann(m-1, 1).
+
+If m > 0 and n > 0, the result is ackermann(m-1, ackermann(m, n-1)).
+
+Python3
+
+def ackermann(m, n):
+    if m == 0:
+        return n + 1
+    elif m > 0 and n == 0:
+        return ackermann(m-1, 1)
+    elif m > 0 and n > 0:
+        return ackermann(m-1, ackermann(m, n-1))
+
+result = ackermann(3, 4)
+print(result)  
+Output - 125
+

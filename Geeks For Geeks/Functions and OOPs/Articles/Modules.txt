@@ -1,0 +1,165 @@
+A Module is a file in python containing Python definitions and statements. These files help organize code into logical, reusable units. Modules make it easier to manage and scale Python projects by breaking them down into smaller components.
+
+Creating a Module
+A Python module is created by saving Python code in a file with a 
+.
+𝑝
+𝑦
+ extension. For example, let's create a simple module named 
+𝑙
+𝑖
+𝑠
+𝑡
+𝑜
+𝑝
+𝑒
+𝑟
+𝑎
+𝑡
+𝑖
+𝑜
+𝑛
+𝑠
+.
+𝑝
+𝑦
+:
+
+Python3
+
+def find_average(numbers):
+    if not numbers:
+        return 0
+    return sum(numbers) / len(numbers)
+
+def filter_even(numbers):
+    return [num for num in numbers if num % 2 == 0]
+
+def reverse_list(input_list):
+    return input_list[::-1]
+
+def concatenate_lists(list1, list2):
+    return list1 + list2
+
+
+This module, 
+𝑙
+𝑖
+𝑠
+𝑡
+𝑜
+𝑝
+𝑒
+𝑟
+𝑎
+𝑡
+𝑖
+𝑜
+𝑛
+𝑠
+, contains four functions for basic list operations.
+
+Importing Module
+Once a module is created, it can be imported into other Python scripts or modules. There are several ways to import a module:
+
+Importing the Entire Module
+Python3
+
+import list_operations
+avg = list_operations.find_average([5, 3, 4, 7])
+evens = list_operations.filter_even([5, 3, 4, 7])
+print(avg,evens)  
+
+
+Importing Specific Functions
+Python3
+
+from list_operations import filter_even
+evens = filter_even([3,5,6,7,8,0])
+
+print(evens)      
+Importing with an Alias
+Python3
+
+import list_operations as op
+
+reverse = op.reverse_list([5, 2, 7, 6])
+print(reverse) 
+Module Search Path
+When importing a module, Python searches for it in a specific order defined by the **module search path**. The search path includes the current directory, directories listed in the 
+𝑃
+𝑌
+𝑇
+𝐻
+𝑂
+𝑁
+𝑃
+𝐴
+𝑇
+𝐻
+ environment variable, and default system directories. Understanding the module search path is crucial for managing dependencies and avoiding naming conflicts.
+
+Special Variables in Modules
+Modules have access to some special variables:
+
+Missing open brace for subscript
+Missing open brace for subscript
+:
+This variable is set to 
+Missing open brace for subscript
+Missing open brace for subscript
+ when the module is run directly, and it is set to the module's name when imported. It allows code to be executed conditionally.
+
+Python3
+
+def find_average(numbers):
+    if not numbers:
+        return 0
+    return sum(numbers) / len(numbers)
+def reverse_list(numbers):
+    return numbers[::-1]
+def filter_even(numbers):
+    return [num for num in numbers if num % 2 == 0]
+  
+if __name__ == "__main__":
+    # Code here will only run when the module is executed directly
+    print(reverse_list([2,4,5,7,9])
+ 
+Package: Organizing Modules
+A package is a way of organizing related modules into a single directory hierarchy. A package is essentially a directory containing module files and a special 
+Missing open brace for subscript
+Missing open brace for subscript
+ file, which can be empty.
+
+For example:
+
+my_package/
+
+|-- __init__.py
+
+|-- list_operations.py
+
+|-- string_operations.py
+
+In this example, 
+𝑚
+𝑦
+𝑝
+𝑎
+𝑐
+𝑘
+𝑎
+𝑔
+𝑒
+ is a package containing two modules.
+
+Best Practices
+1. Use Descriptive Names
+Choose clear and descriptive names for modules and functions to enhance code readability.
+
+2. Avoid Global Variables
+Minimize the use of global variables within modules to prevent unintended side effects.
+
+3. Versioning
+Consider using version numbers in your module names or directory structures to manage changes and updates.
+
