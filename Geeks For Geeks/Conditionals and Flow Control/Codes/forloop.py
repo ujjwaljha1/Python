@@ -27,3 +27,9 @@ for i in range(5):
 for i in range(3):
     for j in range(2):
         print(f"({i}, {j})")
+
+#Enumerate
+list1 = ["Data-Science", "Power BI", "Python"]
+
+for index, subject in enumerate(list1):
+    print(f"Index: {index}, Subj: {subject}")
