@@ -1,0 +1,8 @@
+Explanation:
+Input Reading: s = input().strip() reads the input string and removes any leading or trailing whitespace.
+Loop Through Even Indices: for i in range(0, len(s), 2) loops through the string s starting from index 0 to len(s) - 1, with a step of 2, effectively accessing every character at even indices.
+Print Characters: print(s[i], end="") prints each character at even indices without adding a newline between them.
+Steps to Use the Code:
+Multiple Test Cases: The function main() handles multiple test cases. It reads the number of test cases and calls the utility() function for each test case.
+Output Separation: print() after the call to utility() ensures that each test case's output is separated by a newline.
+This implementation ensures that the characters at even indices are correctly printed for each input string.
