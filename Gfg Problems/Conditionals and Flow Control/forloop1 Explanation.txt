@@ -1,0 +1,16 @@
+Explanation:
+Input:
+
+The function utility() reads an integer n from the input.
+Generating Multiples:
+
+The range(1, 11) generates numbers from 1 to 10.
+For each i in this range, i * n computes the multiplication of n and i.
+Printing Results:
+
+print(i * n, end=" ") prints each multiple followed by a space instead of a newline.
+Handling Multiple Test Cases:
+
+The main() function handles multiple test cases by reading the number of test cases and calling the utility() function for each test case.
+After each test case, a newline is printed to separate the results of different test cases.
+This implementation ensures that the multiplication table is printed correctly in a single line with spaces separating the values.
