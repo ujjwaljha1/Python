@@ -1,0 +1,197 @@
+A dictionary in Python is a collection of key values, used to store data values like a map, which, unlike other data types holds Key-value only a single value as an element.
+
+Dictionary Syntax
+dict_var = {key1 : value1, key2 : value2, …..}
+
+Properties of dictionary
+Dictionaries in Python are unordered collections of items. Unlike lists, the order in which items are added to a dictionary is not preserved.
+Dictionaries are mutable, meaning you can modify their contents by adding, removing, or updating key-value pairs.
+Keys in a dictionary must be immutable, meaning they cannot be changed after creation. Values in a dictionary, on the other hand, can be of any data type and are mutable.
+Retrieving a value from a dictionary is highly efficient, typically taking constant time on average.
+Creating a dictionary
+There are different ways to create a dictionary. You can create a dictionary in Python using curly braces {} and specifying key-value pairs separated by colons ':' . Dictionary can also be created by the built-in function dict(). An empty dictionary can be created by just placing to curly braces{}.
+
+Python3
+
+Dict = {}
+print("Empty Dictionary: ")
+print(Dict)
+
+Dict = dict({1: 'Data', 2: 'Science', 3: 'Python'})
+print("Dictionary with the use of dict() method: ")
+print(Dict)
+
+Dict = dict([(1, 'Data'), (2, 'Science')])
+print("Dictionary with each item as a pair: ")
+print(Dict)
+Output - Empty Dictionary:
+
+{}
+
+Dictionary with the use of dict() method:
+
+{1: 'Data', 2: 'Science', 3: 'Python'}
+
+Dictionary with each item as a pair:
+
+{1: 'Data', 2: 'Science'}
+
+Complexities for Creating a Dictionary
+
+Time complexity: O(len(dict))
+
+Space complexity: O(n)
+
+Accessing values of a dictionary
+To access a value in a dictionary, you can use square brackets [] and provide the key. If the key is not present in the dictionary, it will raise a KeyError. To avoid this, you can use the get method.
+
+Python3
+
+my_dict = {'name':'Rose', 'age': 24}
+print(my_dict['name'])  
+print(my_dict['age'])   
+print(my_dict.get('name','Unknown'))
+print(my_dict.get('city','Unknown'))
+Output - Rose
+
+24
+
+Rose
+
+Unknown
+
+Complexities for Accessing elements in a Dictionary:
+
+Time complexity: O(1)
+
+Space complexity: O(1)
+
+Modifying and adding elements
+You can add elements in a dictionary in multiple ways. One value at a time can be added to a Dictionary by defining value along with the key, for instance Dict[Key] = ‘Value’. Updating an existing value in a Dictionary can be done by using the built-in update() method.
+
+Note - If the key doesn't exist it creates a new key-value pair and if the key already exists in a dictionary it updates it's values with a new value.
+
+Python3
+
+Dict = {}
+Dict['name'] = 'Rose'
+Dict['age'] = 24
+Dict['city'] = 'Gwalior'
+Dict ['city'] = 'Jaipur'
+print("Dictionary after adding/modifying elements: ")
+print(Dict)
+
+#modifying dict using update function
+print("Dictionary after modifying elements through update:")
+Dict.update({'age':26,'city':'Noida'})
+print(Dict)
+Output - Dictionary after adding/modifying elements:
+
+{'name': 'Rose', 'age': 24, 'city': 'Jaipur'}
+
+Dictionary after modifying elements through update:
+
+{'name': 'Rose', 'age': 26, 'city': 'Noida'}
+
+Complexities for Adding elements in a Dictionary:
+
+Time complexity: O(1)/O(n)
+
+Space complexity: O(1)
+
+Removing elements
+To remove a key-value pair from a dictionary, you can use the pop method or use the del keyword.
+
+Python3
+
+Dict = {'name':'Rose','age':24, 'gender':'Female'}
+
+#removing a key using pop
+removed_value = Dict.pop('gender')
+print(removed_value) 
+print(Dict)
+
+# Removing a key using del
+del(Dict['age'])
+print(Dict)
+Output - Female
+
+{'name': 'Rose', 'age': 24}
+
+{'name': 'Rose'}
+
+Dictionary methods
+dict.clear() - Remove all the elements from the dictionary
+
+dict.copy() - Returns a copy of the dictionary
+
+dict.get(key, default = “None”) - Returns the value of specified key
+
+dict.items() - Returns a list containing a tuple for each key value pair
+
+dict.keys() - Returns a list containing dictionary’s keys
+
+dict.update(dict2) - Updates dictionary with specified key-value pairs
+
+dict.values() - Returns a list of all the values of dictionary
+
+pop() - Remove the element with specified key
+
+popItem() - Removes the last inserted key-value pair
+
+dict.setdefault(key,default= “None”) - set the key to the default value if the key is not specified in the dictionary
+
+dict.has_key(key) - returns true if the dictionary contains the specified key.
+
+dict.get(key, default = “None”) - used to get the value specified for the passed key.
+
+Iterating through a dictionary
+You can iterate through the keys, values, or key-value pairs of a dictionary using loops:
+
+Python3
+
+my_dict = {'name':'Rose','age':24, 'gender':'Female'}
+for key in my_dict:
+    print(key, end=' ')
+print('\n')
+# Iterating through values
+for value in my_dict.values():
+    print(value, end=' ')
+print('\n')
+# Iterating through key-value pairs
+for key, value in my_dict.items():
+    print(key, value, end = ' ')
+
+
+Output - name age gender
+
+Rose 24 Female
+
+name Rose age 24 gender Female
+
+
+Challenge Galore
+Problem Statement - Write a Python program that takes a sentence and count the frequency of each unique word in the sentence.
+Python3
+
+def word_frequency_counter(sentence):
+    word_list = sentence.split()
+    word_counts = dict()
+
+    for word in word_list:
+      word_counts[word] = word_counts.get(word, 0) + 1
+
+    return word_counts
+
+user_sentence = input("Enter a sentence: ")
+
+word_frequencies = word_frequency_counter(user_sentence)
+print("Word frequencies in the sentence:")
+for word, count in word_frequencies.items():
+    print(word, count)
+
+
+
+
+
+

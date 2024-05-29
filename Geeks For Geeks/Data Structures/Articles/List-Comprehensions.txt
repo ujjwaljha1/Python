@@ -1,0 +1,79 @@
+List comprehensions provide a concise way to create lists. They offer a compact syntax for generating lists based on existing iterables, such as lists, strings, or ranges.
+
+Basic Syntax:
+The basic syntax of a list comprehension consists of an expression followed by a for clause, all enclosed in square brackets [].
+
+Python3
+
+squares = [x**2 for x in range(5)]
+print(squares)
+Output - [0, 1, 4, 9, 16]
+
+In this example, the list comprehension generates a list of squares for each element in the range from 0 to 4.
+
+Condition in List Comprehension:
+You can include an optional if clause to filter elements based on a condition.
+
+Python3
+
+even_numbers = [x for x in range(10) if x % 2 == 0]
+print(even_numbers)
+Output - [0, 2, 4, 6, 8]
+
+The if clause filters out odd numbers, resulting in a list of even numbers.
+
+Nested List Comprehensions:
+List comprehensions can be nested to create more complex structures.
+
+Python3
+
+matrix = [[i * j for j in range(3)] for i in range(4)]
+print(matrix)
+Output - [[0, 0, 0], [0, 1, 2], [0, 2, 4], [0, 3, 6]]
+
+Using Functions in List Comprehension:
+You can apply functions to elements within a list comprehension.
+
+Python3
+
+letters = ['a', 'b', 'c']
+uppercase_letters = [letter.upper() for letter in letters]
+print(uppercase_letters)
+Output - ['A', 'B', 'C']
+
+The upper() function is applied to each letter in the list to convert them to uppercase.
+
+Applications of List Comprehensions:
+1. Filtering: Create a sub-list based on a condition.
+
+2. Transformation: Apply a transformation to each element in a list.
+
+3.Matrix Operations: Generate matrices and perform operations.
+
+4. String Manipulation: Create lists of characters or modify strings.
+
+Challenge Galore
+Problem Statement - Write a program to print Prime numbers in a given range.
+Python3
+
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# Function to generate a list of prime numbers in a range
+def primes_in_range(start, end):
+    return [num for num in range(start, end + 1) if is_prime(num)]
+
+start_range = int(input("Enter the starting number of the range: "))
+end_range = int(input("Enter the ending number of the range: "))
+
+result = primes_in_range(start_range, end_range)
+print(f"Prime numbers in the range ({start_range}, {end_range}): {result}")
+
+
+
+
