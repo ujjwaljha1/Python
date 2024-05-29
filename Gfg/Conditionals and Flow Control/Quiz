@@ -1,0 +1,70 @@
+***********************All answers are correct **********************************
+Q1-What is the purpose of the else clause in a Python if-else statement?
+A. It is used to handle exceptions.
+B. It is executed when the if condition is true.
+C. It is executed when none of the preceding if or elif conditions are true.
+D. It is used to terminate the program.
+**Correct Answer:** C. It is executed when none of the preceding if or elif conditions are true.
+
+Q2-What is the purpose of the elif keyword in a Python if-elif-else statement?
+A. It is short for "else if" and is used to check multiple conditions sequentially.
+B. It is used to terminate the program if the if condition is false.
+C. It is used to declare a variable.
+D. It is executed when the if condition is true.
+**Correct Answer:** A. It is short for "else if" and is used to check multiple conditions sequentially.
+
+Q3-Which of the following statements is true regarding the if-else statement in Python?
+A. The else block is mandatory.
+B. The if block is optional.
+C. Either the if block or the else block will be executed, but not both.
+D. Both the if and else blocks can be executed under certain conditions.
+**Correct Answer:** C. Either the if block or the else block will be executed, but not both.
+
+Q4-What is the purpose of the range() function in a Python for loop?
+A. To generate a list of numbers.
+B. To specify the number of iterations for the loop.
+C. To create a sequence of numbers over which the loop will iterate.
+D. To calculate the average of the loop variables.
+**Correct Answer:** C. To create a sequence of numbers over which the loop will iterate.
+
+Q5-What does the continue statement do in a Python for loop?
+A. It terminates the loop.
+B. It skips the rest of the code in the loop and proceeds to the next iteration.
+C. It restarts the loop from the beginning.
+D. It prints the current loop variable.
+**Correct Answer:** B. It skips the rest of the code in the loop and proceeds to the next iteration.
+
+Q6-In a Python for loop, which method is used to iterate over the elements of an iterable (e.g., a list or a string) and retrieve both the index and the value?
+A. enumerate()
+B. iter()
+C. range()
+D. zip()
+**Correct Answer:** A. enumerate()
+
+Q7-What is the primary purpose of a while loop in Python?
+A. To define a function.
+B. To create an infinite loop.
+C. To iterate over a sequence of elements.
+D. To repeatedly execute a block of code as long as a condition is true.
+**Correct Answer:** D. To repeatedly execute a block of code as long as a condition is true.
+
+Q8-What is the purpose of the break statement in a while loop?
+A. To restart the loop.
+B. To skip the rest of the code and proceed to the next iteration.
+C. To exit the loop prematurely.
+D. To increment the loop variable.
+**Correct Answer:** C. To exit the loop prematurely.
+
+Q9-In a while loop, when is the condition checked?
+A. Before each iteration.
+B. After each iteration.
+C. Only at the beginning.
+D. Only at the end.
+**Correct Answer:** A. Before each iteration.
+
+Q10-What is the purpose of the else clause in a while loop?
+A. It is executed if the loop encounters an error.
+B. It is executed when the loop variable reaches its maximum value.
+C. It is executed when the loop condition becomes false.
+D. It is used to define an alternative condition for the loop.
+**Correct Answer:** C. It is executed when the loop condition becomes false.
