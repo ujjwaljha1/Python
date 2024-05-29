@@ -1,0 +1,58 @@
+In the world of data science, where we're surrounded by tons of information, organizing and understanding data is crucial. Python, a friendly and flexible programming language, comes equipped with tools called data structures that make dealing with data much easier.
+
+Naming and Storing Information: Variables
+Variables are like labeled containers that hold information. Think of them as sticky notes where we jot down data for later use. In Python, creating a variable is as simple as giving a name to your information.
+
+Python3
+
+# Creating Variables
+name = "Alice"
+age = 25
+height = 1.75
+
+
+Categorizing Information: Data Types
+Python has different data types to categorize information based on its nature. The three main types we'll explore are:
+
+Strings: For text and characters.
+
+Integers: For whole numbers.
+
+Floats: For numbers with decimals.
+
+Storing and Finding Stuff: Lists, Tuples and Sets
+Think of lists and tuples as containers where we can neatly store different types of information. Lists are like flexible backpacks that can grow or shrink, while tuples are more like solid, unchanging treasure chests. They help us keep our data organized and make it easy to find what we need.
+
+Python3
+
+# List Example
+items_list = ['apple', 'banana', 'orange', 5]
+
+# Tuple Example
+fruit_tuple = ('kiwi', 'grape', 'pear')
+
+
+Labeling Everything: Dictionaries
+Dictionaries act like super organized notebooks where we can label everything. Instead of finding information based on its position, we look it up using a label. In data science, this is super handy for keeping our data organized and making sure each piece is unique.
+
+Python3
+
+# Dictionary Example
+person_info = {'Name': 'Sophie', 'Age': 28, 'Job': 'Scientist'}
+Quick Queue: Deque
+A deque is like a line where people can join or leave from both ends. This is handy when we need to manage information like a queue – first in, first out!
+
+Python3
+
+from collections import deque
+
+# Creating a Deque
+people_line = deque(['Alice', 'Bob', 'Charlie'])
+
+# Joining and Leaving
+people_line.append('David')
+people_line.popleft()
+
+
+Python Data Structures are like our trusty tools for keeping everything in order. From lists and dictionaries to Pandas tables and math-friendly NumPy arrays, each structure has its special powers. By understanding and using them, we can turn the chaos of data into a well-organized dataset, using Python's feature as handy tool in the world of data science.
+
