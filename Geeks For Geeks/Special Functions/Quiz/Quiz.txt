@@ -1,0 +1,137 @@
+Sure, here are questions 1 to 10 along with options and answers:
+
+**Question 1:**
+What does the squares list contain after executing the code?
+```python
+numbers = [1, 2, 3, 4, 5]
+squares = list(map(lambda x: x**2, numbers))
+```
+A) [1, 2, 3, 4, 5]  
+B) [1, 4, 9, 16, 25]  
+C) [2, 4, 6, 8, 10]  
+D) [0, 1, 4, 9, 16]
+
+**Answer:**  
+B) [1, 4, 9, 16, 25]
+
+**Question 2:**
+What is the value of filtered_words after executing the code?
+```python
+words = ["apple", "banana", "cherry"]
+filtered_words = list(filter(lambda x: len(x) > 5, words))
+```
+A) ["apple"]  
+B) ["banana"]  
+C) ["cherry"]  
+D) ["banana", "cherry"]
+
+**Answer:**  
+D) ["banana", "cherry"]
+
+**Question 3:**
+What is the value of result after executing the code?
+```python
+nums1 = [1, 2, 3]
+nums2 = [4, 5, 6]
+result = list(zip(nums1, nums2))
+```
+A) [(1, 4), (2, 5), (3, 6)]  
+B) [5, 7, 9]  
+C) [(1, 2, 3), (4, 5, 6)]  
+D) [1, 2, 3, 4, 5, 6]
+
+**Answer:**  
+A) [(1, 4), (2, 5), (3, 6)]
+
+**Question 4:**
+What does the squared_odd list contain after executing the code?
+```python
+numbers = [1, 2, 3, 4, 5]
+squared_odd = list(map(lambda x: x**2, filter(lambda x: x % 2 != 0, numbers)))
+```
+A) [1, 9, 25]  
+B) [1, 4, 9, 16, 25]  
+C) [2, 4]  
+D) [9, 25]
+
+**Answer:**  
+A) [1, 9, 25]
+
+**Question 5:**
+What is the value of result after executing the code?
+```python
+from functools import reduce
+
+numbers = [1, 2, 3, 4, 5]
+product = lambda x, y: x * y
+result = reduce(product, numbers)
+```
+A) 120  
+B) 15  
+C) 30  
+D) 0
+
+**Answer:**  
+A) 120
+
+**Question 6:**
+What does the ord function in Python do?
+A) Rounds a floating-point number to the nearest integer  
+B) Returns the Unicode code point of a character  
+C) Converts a number to its hexadecimal representation  
+D) Finds the absolute value of a number
+
+**Answer:**  
+B) Returns the Unicode code point of a character
+
+**Question 7:**
+What is the value of ascii_value after executing the code?
+```python
+char = 'A'
+ascii_value = ord(char)
+```
+A) 65  
+B) 66  
+C) 67  
+D) 68
+
+**Answer:**  
+A) 65
+
+**Question 8:**
+What is the value of character after executing the code?
+```python
+code_point = 97
+character = chr(code_point)
+```
+A) 'A'  
+B) 'B'  
+C) 'a'  
+D) 'b'
+
+**Answer:**  
+C) 'a'
+
+**Question 9:**
+What is the value of ascii_values after executing the code?
+```python
+text = "Python"
+ascii_values = [ord(char) for char in text]
+```
+A) [80, 121, 116, 104, 111, 110]  
+B) [112, 121, 116, 104, 111, 110]  
+C) [72, 101, 108, 108, 111, 32]  
+D) [65, 66, 67, 68, 69, 70]
+
+**Answer:**  
+A) [80, 121, 116, 104, 111, 110]
+
+**Question 10:**
+What is the result of the expression chr(ord('A') + 3)?
+A) 'D'  
+B) 'E'  
+C) 'B'  
+D) 'C'
+
+**Answer:**  
+A) 'D'
