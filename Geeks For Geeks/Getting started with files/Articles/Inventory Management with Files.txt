@@ -1,0 +1,25 @@
+Inventory Management
+Inventory management is the process of keeping track of inventory levels, orders, and sales in order to ensure that businesses have enough stock on hand to meet customer demand.
+
+What is Inventory?
+Inventory is a program or a database where we hold data of each and every product For eg: How much products we are having? What is the price of each product and how much products we have sold and What is the total sales?
+
+Different Steps in the Inventory Management Project :
+Step 1 : Creating a File name inventory.txt in write mode.
+
+Step 2 : Adding the product details in the inventory.txt file ie : Id , Name , Price , Quantity and Category of the product as comma separated values.
+
+Step 3 : Opening , Reading and Printing the content of the file .
+
+Step 4 : Verifying if the user's desired product is actually in Inventory.
+
+Step 5 : Generating a Bill of the products purchased by the user.
+
+Step 6 : Updating the Inventory List .
+
+Step 7: Adding More Functionalities i.e Prompting the user if demand of the user for an item is greater than the item in the inventory.
+
+Step 8: Adding the details of the user and transaction the inventory in a new file sales.txt ie Name, Phone no, Quantity and Billing amount of the user.
+
+Step 9: Observing the time of the Transaction.
+
