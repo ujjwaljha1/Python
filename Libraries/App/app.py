@@ -64,3 +64,25 @@ Multi=st.multiselect("Data Science: ",['Data analysis','Web Development','AI/ML'
                               'Web scrapping'])
 st.write('You have selected: ',len(Multi)," Courses",Multi)
 
+
+st.subheader("Button")
+if(st.button('Click Me')):
+    st.success("Thanks for clicking this!!")
+
+st.subheader("Slider")
+var=st.slider('Select the volume',1,100,step=1)
+st.write("The volume ism : ",var)
+
+st.subheader("Text input")
+name=st.text_input("Enter your name : ")
+if(name):
+    st.write("Hi ",name,"to my website")
+else:
+    st.write("Please enter your name")
+
+
+password=st.text_input('Password: ',type='password')
+
+st.subheader("Text area")
+st.text_area("Write something interesting about yourselg in 20 words",height=20)
+
