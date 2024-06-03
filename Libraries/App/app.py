@@ -27,3 +27,40 @@ st.write(range(1,10))
 st.write("1+2+3")
 st.write(1+2+3)
 
+st.code('x=10 \n'
+        'for i in range(1,10):\n'                     #For witing code
+        '\tprint(i)')
+
+
+st.checkbox('Male')                                 #Check box
+st.checkbox('Female')                               #Checkbox is Multiple always
+
+if(st.checkbox('Adult')):
+    st.success("You are adult")
+else:
+    st.error("You are not adult")
+
+st.radio('Select: ',('Male','Female','Transgender'))                  #Radio is single
+
+radiobutton=st.radio('Select your gender: ',('Male','Female'))   
+if(radiobutton=='Male'):
+    st.write('You are a male')
+elif(radiobutton=='Female'):
+    st.write('You are a female') 
+else:
+    st.error("Please select one option")
+
+st.subheader("Select Box")
+selectBox=st.selectbox("Data Science: ",['Data analysis','Web Development','AI/ML',
+                               'Cloud Computing','AWS','Mern-Stack',
+                              'Image Processing','NLP','Deep Learning',
+                              'Web scrapping'])
+st.write("You have selected: ",selectBox)
+
+st.subheader("Multi select box")
+Multi=st.multiselect("Data Science: ",['Data analysis','Web Development','AI/ML',
+                               'Cloud Computing','AWS','Mern-Stack',
+                              'Image Processing','NLP','Deep Learning',
+                              'Web scrapping'])
+st.write('You have selected: ',len(Multi)," Courses",Multi)
+
