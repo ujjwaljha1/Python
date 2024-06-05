@@ -1,0 +1,77 @@
+Introduction
+SQL, or Structured Query Language, is the de facto standard for querying and manipulating relational databases. SQL commands can be categorized based on their functionality into several types, such as Data Query Language (DQL), Data Definition Language (DDL), Data Manipulation Language (DML), and Data Control Language (DCL), among others. This article aims to provide an exhaustive overview of the different types of SQL commands along with their usage examples.
+
+Data Query Language (DQL)
+
+DQL is used for querying databases and retrieving data from them.
+
+SELECT : The SELECT statement is used to retrieve data from one or more tables in a database.
+
+SELECT first_name, last_name FROM employees;
+
+Data Definition Language (DDL)
+
+DDL commands are used to define, alter, or drop the structure of database objects like tables, indexes, and schemas.
+
+CREATE: CREATE is used to create a new database object, like a table.
+
+CREATE TABLE employees (
+
+id INT PRIMARY KEY,
+
+first_name VARCHAR(50),
+
+last_name VARCHAR(50)
+
+);
+
+ALTER: ALTER is used to modify existing database objects.
+
+ALTER TABLE employees ADD COLUMN email VARCHAR(50);
+
+DROP: DROP is used to delete database objects.
+
+DROP TABLE employees;
+
+Data Manipulation Language (DML): DML commands modify data within tables.
+
+INSERT: INSERT is used to add new rows to a table.
+
+INSERT INTO employees (id, first_name, last_name) VALUES (1, 'John', 'Doe');
+
+UPDATE :UPDATE modifies existing data in a table.
+
+UPDATE employees SET email = 'john.doe@email.com' WHERE id = 1;
+
+DELETE :DELETE is used to remove data from a table.
+
+DELETE FROM employees WHERE id = 1;
+
+Data Control Language (DCL) :DCL commands manage access to data within the database.
+
+GRANT: GRANT provides specific privileges to users.
+
+GRANT SELECT, INSERT ON employees TO user1;
+
+REVOKE: REVOKE removes specific privileges from users.
+
+REVOKE INSERT ON employees FROM user1;
+
+Transaction Control Language (TCL) : TCL commands manage transactions in a database.
+
+COMMIT: COMMIT saves all the transactions made during the current session.
+
+COMMIT;
+
+ROLLBACK: ROLLBACK undoes transactions that have not yet been saved to the database.
+
+ROLLBACK;
+
+SAVEPOINT: SAVEPOINT sets a point within a transaction to which you can later roll back.
+
+SAVEPOINT savepoint1;
+
+Summary
+
+Understanding the types of SQL commands is fundamental to database management. Each category of command serves specific roles ranging from querying and retrieving data (DQL), defining and modifying the structure of database objects (DDL), to manipulating data within those objects (DML). Additionally, commands for controlling access (DCL) and managing transactions (TCL) complete the SQL command set, providing a comprehensive toolset for interacting with relational databases.
+
