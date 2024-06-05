@@ -86,3 +86,12 @@ password=st.text_input('Password: ',type='password')
 st.subheader("Text area")
 st.text_area("Write something interesting about yourselg in 20 words",height=20)
 
+
+st.subheader("Input number")
+st.number_input("Select your age",1,100)
+
+st.subheader("input date")
+st.date_input("Select date: ")
+
+st.subheader("Input time")
+st.time_input('Select time : ')
