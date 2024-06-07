@@ -1,0 +1,118 @@
+Introduction
+Data Definition Language (DDL) forms the structural foundation of any SQL-based database. As its name suggests, DDL commands define the schema or structure of the database. Whether you're creating a new table, altering its structure, or deleting it, you're likely using a DDL command. This article aims to offer a comprehensive understanding of DDL commands focusing on operations related to databases and tables.
+
+Creating a Database
+
+The starting point for any data-related project is usually the creation of a new database.
+
+CREATE DATABASE
+
+The CREATE DATABASE command is used to create a new database.
+
+CREATE DATABASE EmployeeDatabase;
+
+Here, a new database named EmployeeDatabase is created.
+
+Creating Tables
+
+Data in relational databases is stored in tables, which consist of rows and columns.
+
+CREATE TABLE
+
+The CREATE TABLE statement helps you create a new table within a database.
+
+CREATE TABLE Employees (
+
+EmployeeID INT PRIMARY KEY,
+
+FirstName VARCHAR(50),
+
+LastName VARCHAR(50),
+
+Age INT
+
+);
+
+This command creates an Employees table with four columns: EmployeeID, FirstName, LastName, and Age.
+
+Modifying Tables
+
+Over time, you might need to add or remove columns or change the data types of existing columns. This is where the ALTER TABLE command comes in handy.
+
+ALTER TABLE
+
+Adding a Column
+
+You can add a new column using the following syntax:
+
+ALTER TABLE Employees ADD Email VARCHAR(100);
+
+Modifying a Column
+
+You can modify the properties of an existing column as follows:
+
+ALTER TABLE Employees ALTER COLUMN Age FLOAT;
+
+Deleting a Column
+
+To remove an existing column, you can use the following command:
+
+ALTER TABLE Employees DROP COLUMN Age;
+
+Renaming a Table
+
+You can also rename an existing table:
+
+ALTER TABLE Employees RENAME TO StaffMembers;
+
+Deleting Tables and Databases
+
+DROP TABLE
+
+If you want to delete a table and all its data, the DROP TABLE command will do just that.
+
+DROP TABLE Employees;
+
+DROP DATABASE
+
+To delete an entire database, you can use the DROP DATABASE command. This will erase all tables and data within the database.
+
+DROP DATABASE EmployeeDatabase;
+
+
+
+Managing Constraints
+
+Data integrity is crucial in any database. Constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, and CHECK can be applied to enforce specific conditions on tables.
+
+Adding Constraints
+
+You can define constraints either during the table creation or afterward.
+
+CREATE TABLE Orders (
+
+OrderID INT PRIMARY KEY,
+
+CustomerID INT,
+
+Quantity INT,
+
+CONSTRAINT FK_Customer FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+
+);
+
+Or you can add it later:
+
+ALTER TABLE Orders ADD CONSTRAINT FK_Customer FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID);
+
+
+
+Removing Constraints
+
+To remove a constraint:
+
+ALTER TABLE Orders DROP CONSTRAINT FK_Customer;
+
+Summary
+
+DDL commands are essential for defining and modifying the structure of your databases and tables. From the creation of databases and tables with CREATE DATABASE and CREATE TABLE to their modification using ALTER TABLE, and finally their deletion using DROP TABLE and DROP DATABASE, DDL gives you a robust set of tools to manage your database schema. Understanding these commands is vital for anyone interested in database management.

@@ -40,7 +40,7 @@ if(st.checkbox('Adult')):
 else:
     st.error("You are not adult")
 
-st.radio('Select: ',('Male','Female','Transgender'))                  #Radio is single
+st.radio('Select: ',('Male','Female','Transgender'),help='Choose one ',horizontal=True)                  #Radio is single
 
 radiobutton=st.radio('Select your gender: ',('Male','Female'))   
 if(radiobutton=='Male'):
